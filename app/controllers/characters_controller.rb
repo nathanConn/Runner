@@ -19,22 +19,13 @@ class CharactersController < ApplicationController
 
   # GET /characters/1/edit
   def edit
+    @character = Character.find(params[:id])
   end
 
   # POST /characters
   # POST /characters.json
   def create
     @character = Character.new(character_params)
-
-    respond_to do |format|
-      if @character.save
-        format.html { redirect_to @character, notice: 'Character was successfully created.' }
-        format.json { render :show, status: :created, location: @character }
-      else
-        format.html { render :new }
-        format.json { render json: @character.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /characters/1

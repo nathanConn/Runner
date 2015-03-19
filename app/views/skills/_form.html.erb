@@ -1,0 +1,9 @@
+<%= form_for([@character, @character.skills.build]) do |f| %>
+  <p>
+    <%= f.text_area :name %>   
+    <%= f.number_field :value %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

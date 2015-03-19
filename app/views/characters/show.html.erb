@@ -5,7 +5,7 @@
     <%= @character.name %>
     </strong>
   </h3>
-  
+
   <h5>Attributes:</h5>
   <p>
     <strong>Sex:</strong>
@@ -69,3 +69,10 @@
   <p id="notice"><%= notice %></p>
     <h3>"</h3>
   <h5>Skills:</h5>
+  <%= render @character.skills %>
+
+  <h5>Add New Skill:</h5>
+    <%= render 'skills/form' %>
+ 
+<%= link_to 'Back', character_path %> |
+<%= link_to 'Edit', edit_character_path(@character) %>
