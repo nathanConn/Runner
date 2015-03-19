@@ -1,64 +1,71 @@
-<p id="notice"><%= notice %></p>
+<div style="float:left; width:20%;">
+  <p id="notice"><%= notice %></p>
+  <h3>
+    <strong>
+    <%= @character.name %>
+    </strong>
+  </h3>
+  
+  <h5>Attributes:</h5>
+  <p>
+    <strong>Sex:</strong>
+    <%= @character.sex %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @character.name %>
-</p>
+  <p>
+    <strong>Body:</strong>
+    <%= @character.body %>
+  </p>
 
-<p>
-  <strong>Sex:</strong>
-  <%= @character.sex %>
-</p>
+  <p>
+    <strong>Agility:</strong>
+    <%= @character.agility %>
+  </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @character.body %>
-</p>
+  <p>
+    <strong>Reaction:</strong>
+    <%= @character.reaction %>
+  </p>
 
-<p>
-  <strong>Agility:</strong>
-  <%= @character.agility %>
-</p>
+  <p>
+    <strong>Strength:</strong>
+    <%= @character.strength %>
+  </p>
 
-<p>
-  <strong>Reaction:</strong>
-  <%= @character.reaction %>
-</p>
+  <p>
+    <strong>Willpower:</strong>
+    <%= @character.willpower %>
+  </p>
 
-<p>
-  <strong>Strength:</strong>
-  <%= @character.strength %>
-</p>
+  <p>
+    <strong>Logic:</strong>
+    <%= @character.logic %>
+  </p>
 
-<p>
-  <strong>Willpower:</strong>
-  <%= @character.willpower %>
-</p>
+  <p>
+    <strong>Intuition:</strong>
+    <%= @character.intuition %>
+  </p>
 
-<p>
-  <strong>Logic:</strong>
-  <%= @character.logic %>
-</p>
+  <p>
+    <strong>Charisma:</strong>
+    <%= @character.charisma %>
+  </p>
 
-<p>
-  <strong>Intuition:</strong>
-  <%= @character.intuition %>
-</p>
+  <p>
+    <strong>Edge:</strong>
+    <%= @character.edge %>
+  </p>
 
-<p>
-  <strong>Charisma:</strong>
-  <%= @character.charisma %>
-</p>
+  <p>
+    <strong>Essence:</strong>
+    <%= @character.essence %>
+  </p>
 
-<p>
-  <strong>Edge:</strong>
-  <%= @character.edge %>
-</p>
-
-<p>
-  <strong>Essence:</strong>
-  <%= @character.essence %>
-</p>
-
-<%= link_to 'Edit', edit_character_path(@character) %> |
-<%= link_to 'Back', characters_path %>
+  <%= link_to 'Edit', edit_character_path(@character) %> |
+  <%= link_to 'Back', characters_path %>
+</div>
+<div style="float:left; width:20%;">
+  <p id="notice"><%= notice %></p>
+    <h3>"</h3>
+  <h5>Skills:</h5>
