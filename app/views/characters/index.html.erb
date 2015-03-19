@@ -1,0 +1,47 @@
+<h1>Listing characters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Body</th>
+      <th>Agility</th>
+      <th>Reaction</th>
+      <th>Strength</th>
+      <th>Willpower</th>
+      <th>Logic</th>
+      <th>Intuition</th>
+      <th>Charisma</th>
+      <th>Edge</th>
+      <th>Essence</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= character.name %></td>
+        <td><%= character.sex %></td>
+        <td><%= character.body %></td>
+        <td><%= character.agility %></td>
+        <td><%= character.reaction %></td>
+        <td><%= character.strength %></td>
+        <td><%= character.willpower %></td>
+        <td><%= character.logic %></td>
+        <td><%= character.intuition %></td>
+        <td><%= character.charisma %></td>
+        <td><%= character.edge %></td>
+        <td><%= character.essence %></td>
+        <td><%= link_to 'Show', character %></td>
+        <td><%= link_to 'Edit', edit_character_path(character) %></td>
+        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Character', new_character_path %>
