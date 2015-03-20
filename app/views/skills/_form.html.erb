@@ -1,6 +1,8 @@
 <%= form_for([@character, @character.skills.build]) do |f| %>
   <p>
+  	<h5>Skill Name</h5>
     <%= f.text_area :name, :cols => "20", :rows => "1" %>   
+    <h5>Skill Value</h5>
     <%= f.number_field :value %>
   </p>
   <p>

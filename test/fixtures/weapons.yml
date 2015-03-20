@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  damage: 1
+  wireless: false
+  ammo: 1
+  misc: 1
+  character_id: 
+
+two:
+  name: MyString
+  damage: 1
+  wireless: false
+  ammo: 1
+  misc: 1
+  character_id: 

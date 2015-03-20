@@ -1,0 +1,26 @@
+<p>
+  <strong><%= weapon.name %></strong>
+</p>
+ <p>
+    <strong>Damage:</strong>
+    <%= @weapon.damage %>
+  </p>
+ <p>
+    <strong>Ammo:</strong>
+    <%= @weapon.ammo %>
+  </p>
+   <p>
+    <strong>Misc:</strong>
+    <%= @weapon.misc %>
+  </p>
+   <p>
+    <strong>Wireless:</strong>
+    <%= @weapon.wireless %>
+  </p>
+
+<p>
+<%#= link_to 'Edit', [:edit, skill.character, skill] %><p>Weapon.edit?</P> |
+<%= link_to 'Destroy Weapon', [weapon.character, weapon],
+			method: :delete,
+			data: { confirm: 'Really?' } %>
+</p>
