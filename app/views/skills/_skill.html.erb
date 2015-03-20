@@ -3,3 +3,9 @@
   <strong>:</strong>
   <%= skill.value %>
 </p>
+
+<p>
+<%= link_to 'Destroy Skill', [skill.character, skill],
+			method: :delete,
+			data: { confirm: 'Really?' } %>
+</p>

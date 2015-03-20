@@ -1,6 +1,6 @@
 <%= form_for([@character, @character.skills.build]) do |f| %>
   <p>
-    <%= f.text_area :name %>   
+    <%= f.text_area :name, :cols => "20", :rows => "1" %>   
     <%= f.number_field :value %>
   </p>
   <p>
