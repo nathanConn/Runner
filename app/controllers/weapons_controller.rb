@@ -47,7 +47,7 @@ class WeaponsController < ApplicationController
   # DELETE /weapons/1.json
   def destroy
     @character = Character.find(params[:character_id])
-    @weapon     = @character.weapon.find(params[:id])
+    @weapon     = @character.weapons.find(params[:id])
     @weapon.destroy
     redirect_to character_path(@character)
   end
