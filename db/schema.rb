@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321200453) do
+ActiveRecord::Schema.define(version: 20150321205506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150321200453) do
     t.integer  "character_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "misc"
+    t.string   "misc"
   end
 
   add_index "armors", ["character_id"], name: "index_armors_on_character_id", using: :btree
@@ -45,6 +45,18 @@ ActiveRecord::Schema.define(version: 20150321200453) do
     t.datetime "updated_at"
   end
 
+  create_table "gears", force: true do |t|
+    t.string   "name"
+    t.integer  "rating"
+    t.boolean  "wireless"
+    t.string   "misc"
+    t.integer  "character_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "gears", ["character_id"], name: "index_gears_on_character_id", using: :btree
+
   create_table "skills", force: true do |t|
     t.string   "name"
     t.integer  "value"
@@ -60,7 +72,7 @@ ActiveRecord::Schema.define(version: 20150321200453) do
     t.integer  "damage"
     t.boolean  "wireless"
     t.integer  "ammo"
-    t.integer  "misc"
+    t.string   "misc"
     t.integer  "character_id"
     t.datetime "created_at"
     t.datetime "updated_at"

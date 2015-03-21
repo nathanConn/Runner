@@ -1,12 +1,12 @@
-<%= form_for([@character, @character.armors.build]) do |f| %>
+<%= form_for([@character, @character.gears.build]) do |f| %>
   <p>
-    <h5>Armor Name</h5>
+    <h5>Item Name</h5>
     <%= f.text_area :name, :cols => "20", :rows => "1" %>   
     <h5>Rating</h5>
     <%= f.number_field :rating %>
     <h5>Wireless</h5>
     <%= f.check_box :wireless %>
-    <h5>Armor Misc</h5>
+    <h5>Item Misc</h5>
     <%= f.text_area :misc %>
   </p>
   <p>
