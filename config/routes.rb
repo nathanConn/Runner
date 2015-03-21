@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :characters do
-  resources :skills, :weapons
+  resources :skills, :weapons, :armors
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

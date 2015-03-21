@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320052049) do
+ActiveRecord::Schema.define(version: 20150321200453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "armors", force: true do |t|
+    t.string   "name"
+    t.integer  "rating"
+    t.boolean  "wireless"
+    t.integer  "character_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "misc"
+  end
+
+  add_index "armors", ["character_id"], name: "index_armors_on_character_id", using: :btree
 
   create_table "characters", force: true do |t|
     t.string   "name"

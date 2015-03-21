@@ -80,5 +80,12 @@
   <%= render @character.weapons %>
 <h5>Add New Weapon:</h5>
   <%= render 'weapons/form' %>
-
+</div>
+<div style="float:left; width:20%;">
+  <p id="notice"><%= notice %></p>
+  <br></br>
+<h5>Armor:
+      <%= render @character.armors %>
+  <h5>Add New Armor:</h5>
+    <%= render 'armors/form' %>
 </div>
