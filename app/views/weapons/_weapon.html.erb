@@ -12,12 +12,12 @@
         <%= weapon.misc %></p>
       <p><strong>Wireless</strong>
         <strong>:</strong>
-        <%= check_box_tag 'wireless', '1' %>
+        <%= check_box_tag 'wireless', '1' %></p>
 
       <p><%= link_to 'x', [weapon.character, weapon],
                   method: :delete,
                   data: { confirm: 'Really?' } %></p>
   <% end %>
 <% else %>
-   <p colspan=4>You don't have any weapons.</p>
+      <p colspan=4>You don't have any weapons.</p>
 <% end %>

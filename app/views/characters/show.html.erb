@@ -39,7 +39,8 @@
       </tbody>
     </table>
 </div>
-<div style="float:left; width:20%;">
+
+<div style="float:left; width:25%;">
   <p id="notice"><%= notice %></p>
     <br></br>
   <h5>Skills:</h5>
@@ -47,27 +48,30 @@
   <h5>Add New Skill:</h5>
     <%= render 'skills/form' %>
 </div>
-<div style="float:left; width:20%;">
+
+<div style="float:left; width:25%;">
   <p id="notice"><%= notice %></p>
     <br></br>
-<h5>Weapons:</h5>
-  <%= render 'weapons/weapon' %>
-<h5>Add New Weapon:</h5>
-  <%= render 'weapons/form' %>
+  <h5>Weapons:</h5>
+    <%= render 'weapons/weapon' %>
+  <h5>Add New Weapon:</h5>
+    <%= render 'weapons/form' %>
 </div>
-<div style="float:left; width:20%;">
+
+<div style="float:left; width:25%;">
   <p id="notice"><%= notice %></p>
-  <br></br>
-<h5>Armor:
-      <%= render @character.armors %>
+    <br></br>
+  <h5>Armor:
+    <%= render 'armors/armor' %>
   <h5>Add New Armor:</h5>
     <%= render 'armors/form' %>
 </div>
-<div style="float:left; width:20%;">
+
+<div style="float:left; width:25%;">
   <p id="notice"><%= notice %></p>
-  <br></br>
-<h5>Gear:
-      <%= render @character.gears %>
+    <br></br>
+  <h5>Gear:
+    <%= render 'gears/gear' %>
   <h5>Add New Gear:</h5>
     <%= render 'gears/form' %>
 </div>

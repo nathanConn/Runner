@@ -1,3 +1,5 @@
+<% if @gears.present? %>
+  <% @gears.each do |gear| %>
 <p>
   <strong><%= gear.name %></strong>
 </p>
@@ -15,8 +17,11 @@
   </p>
 
 <p>
-<%#= link_to 'Edit', [:edit, skill.character, skill] %><p>Gear.edit?</P> |
 <%= link_to 'x', [gear.character, gear],
 			method: :delete,
 			data: { confirm: 'Really?' } %>
 </p>
+  <% end %>
+<% else %>
+   <p colspan=4>You don't have any gear.</p>
+<% end %>
