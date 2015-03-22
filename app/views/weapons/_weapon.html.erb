@@ -1,26 +1,23 @@
-<p>
-  <strong><%= weapon.name %></strong>
-</p>
- <p>
-    <strong>Damage:</strong>
-    <%= weapon.damage %>
-  </p>
- <p>
-    <strong>Ammo:</strong>
-    <%= weapon.ammo %>
-  </p>
-   <p>
-    <strong>Misc:</strong>
-    <%= weapon.misc %>
-  </p>
-   <p>
-    <strong>Wireless:</strong>
-    <%= weapon.wireless %>
-  </p>
+<% if @weapons.present? %>
+  <% @weapons.each do |weapon| %>
+      <p><strong><%= weapon.name %></strong></p>
+      <p><strong>Damage</strong>
+        <strong>:</strong>
+        <%= weapon.damage %></p>
+      <p><strong>Ammo</strong>
+        <strong>:</strong>
+        <%= weapon.ammo %></p>
+      <p><strong>Misc</strong>
+        <strong>:</strong>
+        <%= weapon.misc %></p>
+      <p><strong>Wireless</strong>
+        <strong>:</strong>
+        <%= check_box_tag 'wireless', '1' %>
 
-<p>
-<%#= link_to 'Edit', [:edit, skill.character, skill] %><p>Weapon.edit?</P> |
-<%= link_to 'Destroy Weapon', [weapon.character, weapon],
-			method: :delete,
-			data: { confirm: 'Really?' } %>
-</p>
+      <p><%= link_to 'x', [weapon.character, weapon],
+                  method: :delete,
+                  data: { confirm: 'Really?' } %></p>
+  <% end %>
+<% else %>
+   <p colspan=4>You don't have any weapons.</p>
+<% end %>

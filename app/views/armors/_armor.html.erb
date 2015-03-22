@@ -7,7 +7,7 @@
   </p>
   <p>
     <strong>Wireless:</strong>
-    <%= armor.wireless %>
+    <%= check_box_tag 'wireless', '1' %>
   </p>
   <p>
     <strong>Misc:</strong>
@@ -16,7 +16,7 @@
 
 <p>
 <%#= link_to 'Edit', [:edit, skill.character, skill] %><p>Armor.edit?</P> |
-<%= link_to 'Destroy Armor', [armor.character, armor],
+<%= link_to 'x', [armor.character, armor],
 			method: :delete,
 			data: { confirm: 'Really?' } %>
 </p>

@@ -7,7 +7,7 @@
   </p>
   <p>
     <strong>Wireless:</strong>
-    <%= gear.wireless %>
+    <%= check_box_tag 'wireless', '1' %>
   </p>
   <p>
     <strong>Misc:</strong>
@@ -16,7 +16,7 @@
 
 <p>
 <%#= link_to 'Edit', [:edit, skill.character, skill] %><p>Gear.edit?</P> |
-<%= link_to 'Destroy Item', [gear.character, gear],
+<%= link_to 'x', [gear.character, gear],
 			method: :delete,
 			data: { confirm: 'Really?' } %>
 </p>

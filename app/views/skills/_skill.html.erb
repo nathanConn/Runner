@@ -1,12 +1,12 @@
-<p>
-  <strong><%= skill.name %></strong>
-  <strong>:</strong>
-  <%= skill.value %>
-</p>
-
-<p>
-<%#= link_to 'Edit', [:edit, skill.character, skill] %><p>Skill.edit?</P> |
-<%= link_to 'Destroy Skill', [skill.character, skill],
-			method: :delete,
-			data: { confirm: 'Really?' } %>
-</p>
+<% if @skills.present? %>
+  <% @skills.each do |skill| %>
+      <p><strong><%= skill.name %>
+        </strong><strong>:</strong>
+        <%= skill.value %>
+      <%= link_to 'x', [skill.character, skill],
+                  method: :delete,
+                  data: { confirm: 'Really?' } %></p>
+  <% end %>
+<% else %>
+   <p colspan=4>You don't have any skills.</p>
+<% end %>
