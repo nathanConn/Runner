@@ -1,0 +1,35 @@
+<h1>Listing biowares</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Notes</th>
+      <th>Wireless</th>
+      <th>Essence</th>
+      <th>Character</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @biowares.each do |bioware| %>
+      <tr>
+        <td><%= bioware.name %></td>
+        <td><%= bioware.rating %></td>
+        <td><%= bioware.notes %></td>
+        <td><%= bioware.wireless %></td>
+        <td><%= bioware.essence %></td>
+        <td><%= bioware.character %></td>
+        <td><%= link_to 'Show', bioware %></td>
+        <td><%= link_to 'Edit', edit_bioware_path(bioware) %></td>
+        <td><%= link_to 'Destroy', bioware, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bioware', new_bioware_path %>

@@ -1,0 +1,2 @@
+module BiowaresHelper
+end

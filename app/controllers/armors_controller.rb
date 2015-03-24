@@ -52,8 +52,9 @@ class ArmorsController < ApplicationController
     redirect_to character_path(@character)
   end
 
+  private
     # Never trust parameters from the scary internet, only allow the white list through.
-    def armor_params
+  def armor_params
       params.require(:armor).permit(:name, :rating, :wireless, :misc, :character_id)
-    end
+  end
 end

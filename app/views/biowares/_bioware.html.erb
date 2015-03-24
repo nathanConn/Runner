@@ -1,0 +1,31 @@
+<% if @biowares.present? %>
+  <% @biowares.each do |gear| %>
+<p>
+  <strong><%= bioware.name %></strong>
+</p>
+ <p>
+    <strong>Rating:</strong>
+    <%= bioware.rating %>
+  </p>
+   <p>
+    <strong>Notes:</strong>
+    <%= bioware.notes %>
+  </p>
+  <p>
+    <strong>Wireless:</strong>
+    <%= check_box_tag 'wireless', '1' %>
+  </p>
+  <p>
+    <strong>Essence:</strong>
+    <%= bioware.essence %>
+  </p>
+
+<p>
+<%= link_to 'x', [bioware.character, bioware],
+			method: :delete,
+			data: { confirm: 'Really?' } %>
+</p>
+  <% end %>
+<% else %>
+   <p colspan=4>You don't have any Bioware.</p>
+<% end %>
